@@ -11,7 +11,8 @@ classDiagram
       hasNext()
       next()
   }
-  Aggregate <|.. BookShelf : Creates
+  Aggregate ..> Iterator : Creates
+  Aggregate <|.. BookShelf
   Iterator <|.. BookShelfIterator
   class BookShelf {
       -books
@@ -27,9 +28,10 @@ classDiagram
       +hasNext()
       +next()
   }
+  BookShelf <--o BookShelfIterator
   class Book {
       -name
       +getName()
   }
-  BookShelf *-- Book : contains
+  BookShelf o--> Book : contains
 ```
