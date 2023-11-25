@@ -1,6 +1,8 @@
 package framework
 
 abstract class Factory {
+
+    // TemplateMethodパターン
     fun create(owner: String): Product {
         val p: Product = createProduct(owner)
         registerProduct(p)
