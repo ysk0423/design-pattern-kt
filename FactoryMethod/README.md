@@ -1,8 +1,6 @@
 ## クラス図
 
 ```mermaid
-## クラス図
-
 classDiagram
     class Factory {
         <<Abstract>>
