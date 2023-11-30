@@ -2,7 +2,8 @@
 
 ```mermaid
 classDiagram
-    class Main {}
+    class Main {
+    }
     class Director {
         -builder
         construct()
