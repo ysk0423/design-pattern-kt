@@ -5,7 +5,6 @@ fun main(args: Array<String>) {
     if (args.size != 1) {
         exitProcess(0)
     }
-    println("====== ${args[0]}")
     val factory = Factory.getFactory(args[0])
 
     val asahi = factory!!.createLink(caption = "朝日新聞", url = "http://www.asahi.com/")
@@ -25,6 +24,7 @@ fun main(args: Array<String>) {
     trayYahoo.add(jpYahoo)
 
     val traySearch = factory!!.createTray("サーチエンジン")
+    traySearch.add(trayYahoo)
     traySearch.add(excite)
     traySearch.add(google)
 

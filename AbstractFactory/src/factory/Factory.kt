@@ -10,9 +10,8 @@ abstract class Factory {
 
     companion object {
         fun getFactory(className: String): Factory? {
-            println("ここは $className")
             return runCatching {
-                val factory = Class.forName("listfactory.$className").kotlin
+                val factory = Class.forName("$className").kotlin
                 factory.createInstance() as Factory
             }.onFailure {
                     e -> e.printStackTrace()
